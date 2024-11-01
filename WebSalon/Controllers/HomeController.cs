@@ -12,6 +12,15 @@ namespace WebSalon.Controllers
         {
             return View();
         }
+        public ActionResult ĐặtLịch()
+        {
+            return View();
+        }
+        public ActionResult DịchVụ()
+        {
+            return View();
+        }
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
