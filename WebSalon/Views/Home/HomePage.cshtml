@@ -1,74 +1,11 @@
 ﻿@{
     Layout = "~/Views/Shared/MasterLayout.cshtml";
 }
-<style type="text/css">
-    * {
-         margin: 0;
-         padding: 0;
-         font-family: "Poppins", sans-serif;
-     }
 
-    #banner {
-         background-image: linear-gradient(rgba(0,0,0,0.5),#000000),  url('../../Images/banner4.jpg');
-         background-size: cover;
-         background-position: center;
-         height: 100vh;
-     }
-
-    
-    .banner-text{
-         text-align:center;
-         color:white;
-         padding-top:180px;
-            }
-    .banner-text h1 {
-         font-size: 130px;
-         font-family: "Kaushan Script", cursive;
-             }
-    .banner-text p {
-        font-size: 20px;
-        font-style:italic;
-        font-weight:bold;
-             }
-    .banner-btn{
-        margin:70px auto 0;
-            }
-    .banner-btn a {
-        width: 150px;
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        display:inline-block;
-        margin:0 10px;
-        padding:12px 0;
-        border:2px solid white;
-        position:relative;
-        z-index:1;
-        transition:color 0.5s;
-                 }
-    .banner-btn a span{
-        width:0%;
-        height:100%;
-        position:absolute;
-        top:0;
-        left:0;
-        background:white;
-        z-index:-1;
-        transition:0.5s;
-             }
-    .banner-btn a:hover span{
-        width:100%;
-
-                 }
-    .banner-btn a:hover{
-        color:black;
-        font-weight:bold;
-                 }
-      
- }
-</style>
  <html>
  <head>
+     <link rel="stylesheet" href="~/Styles/style.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -76,7 +13,7 @@
  </head>
  
  <body>
-     <section id="banner">        
+     <section id="banner">
          <div class="banner-text">
              <h1>BARBER SHOP</h1>
              <p>HỆ THỐNG BARBER SHOP HÀNG ĐẦU</p>
@@ -85,9 +22,102 @@
                  <a href="#"><span></span>Dịch vụ</a>
              </div>
          </div>
-    
-     </section>     
+     </section>
+     <!--code about us-->
+     <section id="aboutus">
+         <div class="title-text">
+             <p>GIỚI THIỆU</p>
+             
+         </div>
+         <div class="aboutus-box">
+             <div class="aboutus">
+                 <h1>Nhân viên chuyên nghiệp</h1>
+                 <div class="aboutus-desc">
+                     <div class="aboutus-icon">
+                         <i class="fas fa-shield-alt"></i>
+                     </div>
+                     <div class="aboutus-text">
+                         <p>Đội ngũ nhân viên chuyên nghiệp, nhiệt huyết</p>
+                     </div>
+                 </div>
 
+
+                 <div class="aboutus">
+                     <h1>Hỗ trợ đặt lịch</h1>
+                     <div class="aboutus-desc">
+                         <div class="aboutus-icon">
+                             <i class="fas fa-phone"></i>
+                         </div>
+                         <div class="aboutus-text">
+                             <p>Hẹn lịch cắt tóc bất cứ khi nào bạn rảnh</p>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="aboutus">
+                     <h1>Giá cả hợp lý</h1>
+                     <div class="aboutus-desc">
+                         <div class="aboutus-icon">
+                             <i class="fas fa-check"></i>
+                         </div>
+                         <div class="aboutus-text">
+                             <p>Trải nghiệm hàng loạt dịch vụ hấp dẫn với số tiền hợp lý</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="aboutus-img">
+                 <img src="~/Images/barber-man.jpg" />
+             </div>
+         </div>
+     </section>
+     <!--code about us-->
+     <!--code dịch vụ-->
+     <section id="service">
+         <div class="title-text">
+             <p>DỊCH VỤ</p>
+            
+         </div>
+         <div class="service-box">
+             <div class="single-service">
+                 <img src="~/Images/pic-1.jpg" />
+                 <div class="overlay"></div>
+                 <div class="service-desc">
+                     <h3>Nhà tạo mẫu tóc</h3>
+                     <hr />
+                     <p>Giúp tạo nên những kiểu tóc ưng ý nhất cho bạn</p>
+                 </div>
+             </div>
+             <div class="single-service">
+                 <img src="~/Images/pic-2.jpg" />
+                 <div class="overlay"></div>
+                 <div class="service-desc">
+                     <h3>Nhà tạo mẫu tóc</h3>
+                     <hr />
+                     <p>Giúp tạo nên những kiểu tóc ưng ý nhất cho bạn</p>
+                 </div>
+             </div>
+             <div class="single-service">
+                 <img src="~/Images/pic-3.jpg" />
+                 <div class="overlay"></div>
+                 <div class="service-desc">
+                     <h3>Nhà tạo mẫu tóc</h3>
+                     <hr />
+                     <p>Giúp tạo nên những kiểu tóc ưng ý nhất cho bạn</p>
+                 </div>
+             </div>
+             <div class="single-service">
+                 <img src="~/Images/pic-4.jpg" />
+                 <div class="overlay"></div>
+                 <div class="service-desc">
+                     <h3>Nhà tạo mẫu tóc</h3>
+                     <hr />
+                     <p>Giúp tạo nên những kiểu tóc ưng ý nhất cho bạn</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <!--code dịch vụ-->
  </body>
  </html>
 
