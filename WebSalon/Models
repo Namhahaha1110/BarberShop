@@ -1,0 +1,64 @@
+-- Tạo bảng Khách hàng
+CREATE TABLE Customers (
+    customer_id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(20),
+    email VARCHAR(100),
+    date_of_birth DATE,
+    notes TEXT
+);
+
+-- Tạo bảng Dịch vụ
+CREATE TABLE Services (
+    service_id INT IDENTITY(1,1) PRIMARY KEY,
+    service_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    duration_minutes INT NOT NULL
+);
+
+-- Tạo bảng Nhân viên
+CREATE TABLE Staff (
+    staff_id INT IDENTITY(1,1) PRIMARY KEY,
+    staff_name VARCHAR(100) NOT NULL,
+    position VARCHAR(50),
+    work_schedule VARCHAR(100)
+);
+
+-- Tạo bảng Sản phẩm
+CREATE TABLE Products (
+    product_id INT IDENTITY(1,1) PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    stock_quantity INT
+);
+
+-- Tạo bảng Lịch hẹn
+CREATE TABLE Appointments (
+    appointment_id INT IDENTITY(1,1) PRIMARY KEY,
+    customer_id INT,
+    appointment_date DATETIME NOT NULL,
+    service_id INT,
+    staff_id INT,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
+    FOREIGN KEY (service_id) REFERENCES Services(service_id),
+    FOREIGN KEY (staff_id) REFERENCES Staff(staff_id)
+);
+
+-- Tạo bảng Thanh toán
+CREATE TABLE Payments (
+    payment_id INT IDENTITY(1,1) PRIMARY KEY,
+    appointment_id INT,
+    amount DECIMAL(10, 2) NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    payment_date DATETIME NOT NULL,
+    FOREIGN KEY (appointment_id) REFERENCES Appointments(appointment_id)
+);
+
+-- Tạo bảng Khuyến mãi
+CREATE TABLE Promotions (
+    promotion_id INT IDENTITY(1,1) PRIMARY KEY,
+    promotion_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    start_date DATE,
+    end_date DATE
+);
