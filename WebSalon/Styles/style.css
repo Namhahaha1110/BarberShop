@@ -73,7 +73,8 @@
     background:#ffffff;
 }
 .title-text{
-    text-align:center;padding-bottom:70px;
+    text-align:center;
+    padding-bottom:70px;
 }
     .title-text p {
         margin: auto;
@@ -194,3 +195,12 @@ hr{
     opacity:1;
 }
 /*SERVICES*/
+/*PRODUCT*/
+#featureProd {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+/*PRODUCT*/
+

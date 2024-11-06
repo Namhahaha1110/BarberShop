@@ -1,0 +1,109 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+body {
+    background-color: whitesmoke;
+}
+
+.header {
+    background-color: black;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+}
+
+#navigation {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: -200px;
+    top: 0;
+    background: #CC6633;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+#menubtn {
+    width: 50px;
+    height: 50px;
+    background: #CC6633;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+    #menubtn img {
+        width: 20px;
+        margin: 15px;
+    }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+    .footer-section p {
+        margin: 5px 0;
+        color: #fff;
+    }
+
+.contact-info p {
+    color: #d2a679;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+    .social-icons a:hover {
+        color: #d2a679;
+    }
